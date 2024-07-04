@@ -37,7 +37,7 @@ async function handleRegistration(event) {
     formData.append('role', 'Seller');
 
     try {
-        const response = await fetch('http://127.0.0.1:8000/register/', {
+        const response = await fetch('https://products-backend-42ks.onrender.com/register/', {
             method: 'POST',
             body: formData,
         });
@@ -101,7 +101,7 @@ async function handleLogin(event) {
     };
 
     try {
-        const response = await fetch('http://127.0.0.1:8000/login/', {
+        const response = await fetch('https://products-backend-42ks.onrender.com/login/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -160,7 +160,7 @@ async function handleLogout(event) {
 
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/logout/", {
+        const response = await fetch("https://products-backend-42ks.onrender.com/logout/", {
             method: "POST",
             headers: {
                 "Authorization": `Token ${token}`,

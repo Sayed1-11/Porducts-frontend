@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-        const response = await fetch(`http://127.0.0.1:8000/products/${productId}/`, {
+        const response = await fetch(`https://products-backend-42ks.onrender.com/products/${productId}/`, {
             headers: {
                 'Authorization': `Token ${token}`,
                 'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ document.getElementById('editProductForm').addEventListener('submit', async (eve
     const formData = new FormData(form);
 
     try {
-        const response = await fetch(`http://127.0.0.1:8000/products/${productId}/`, {
+        const response = await fetch(`https://products-backend-42ks.onrender.com/products/${productId}/`, {
             method: 'PUT', 
             headers: {
                 'Authorization': `Token ${token}`,

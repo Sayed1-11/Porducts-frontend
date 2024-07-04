@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 const token = localStorage.getItem('token');
-fetch('http://127.0.0.1:8000/products/', {
+fetch('https://products-backend-42ks.onrender.com/products/', {
     headers: {
         'Authorization': `Token ${token}`,
         'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ async function handleProduct(event) {
     formData.append('Created_by', created);
 
     try {
-        const response = await fetch('http://127.0.0.1:8000/products/', {
+        const response = await fetch('https://products-backend-42ks.onrender.com/products/', {
             method: 'POST',
             headers: {
                 'Authorization': `Token ${token}`,
@@ -126,7 +126,7 @@ async function deleteProduct(productId) {
     }
 
     try {
-        const response = await fetch(`http://127.0.0.1:8000/products/${productId}/`, {
+        const response = await fetch(`https://products-backend-42ks.onrender.com/products/${productId}/`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Token ${token}`,

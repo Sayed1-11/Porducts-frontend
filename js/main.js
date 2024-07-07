@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('searchInput');
     const filterCategory = document.getElementById('filterCategory');
     
-    fetch('http://127.0.0.1:8000/products/', {
+    fetch('https://products-backend-42ks.onrender.com//products/', {
         headers: {
             'Authorization': `Token ${token}`,
             'Content-Type': 'application/json',
